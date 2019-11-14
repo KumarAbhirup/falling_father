@@ -48,15 +48,17 @@ window.setAppView('setScore')
 
 - Then do `$ npm i` in the `frontend` and `backend` directories.
 
-- Now, run the `$ env` command in the online Koji editor terminal and copy the result.
+- Now, run the command `$ env | grep 'KOJI_PROJECT` in the online Koji editor terminal and copy the result. It should look something like this:
+```bash
+  KOJI_PROJECT_ID=b6342f53-8284-4598-9ada-816723a3b39f
+  KOJI_PROJECT_TOKEN=71c6bed0-a141-4dec-ad8b-e1a46f3b9625
+```
 
-- Create `.env` file in the root directory of the project and paste the content in it. Now, your environment variables will be filled with the necessary tokens needed to run the Leaderboard.
+- Create an `.env` file in the root directory of the project and paste these two lines into it. Now, your environment variables will be filled with the tokens needed to run the Leaderboard.
 
-- Run `$ npm start` and `$ npm run start-dev` in the `frontend` and `backend` directories respectively.
+- Run `$ export KOJI_SERVICE_URL_backend=http://0.0.0.0:3333 && npm start` in the `frontend`  derectory and  `npm run start-dev` in the `backend` directory.
 
-- That's how you get your local dev environment.
-
-- As per now, there are problems with Leaderboard working locally. But you don't have to worry as Leaderboard will always work when you deploy your changes.
+- That's how you get your local dev environment. Visit the game at [0.0.0.0:8080](http://0.0.0.0:8080) in your browser and click on the Leaderboard button, to check that it is displayed correctly. If there are no scores stored yet, you should still see the title "Top Scores" at the top left and a "Close" link at the top right.
 
 ### Save to GitHub
 
